@@ -1,0 +1,22 @@
+{
+    "name": "dimasch/m2-quickview",
+    "description": "Clicking at product should open a popup with it's information and options + add to cart button",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "d.shegolikhin@gmail.com",
+            "name": "Dmitry Schegolikhin"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Dimasch\\QuickView\\": ""
+        }
+    }
+}
