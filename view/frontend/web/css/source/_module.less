@@ -1,0 +1,59 @@
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .mfp-bg {
+        background: #ffff;
+        opacity: 1;
+    }
+
+    .product-item-info {
+        position: relative;
+        .quick-view-btn-container {
+            left: 50%;
+            -webkit-transform: translate(-50%, 0);
+            -moz-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+            white-space: nowrap;
+            position: absolute;
+            top: 30%;
+            text-align: center;
+            z-index: 2;
+        }
+    }
+
+    .products-grid, .products-list {
+        a.quick-view-button {
+        background: #f12084 url('../Dimasch_QuickView/images/icon.png') no-repeat 15px center;
+        border: 1px solid #f12084;
+        color: @color-white;
+        display: inline-block;
+        opacity: 0;
+        visibility: hidden;
+        font-family: @font-family__base;
+        font-size: @font-size__base - 1;
+        font-weight: @font-weight__semibold;
+        line-height: 13px;
+        padding: 10px 15px 10px 36px;
+        -webkit-box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.3);
+        }
+        .product-item {
+            &:hover {
+                a.quick-view-button {
+                opacity: 1 !important;
+                visibility: visible !important;
+                &:hover {
+                    background-color: #f12084;
+                    border-color: #f12084;
+                    text-decoration: none;
+                }
+                }
+            }
+        }
+    }
+
+}
