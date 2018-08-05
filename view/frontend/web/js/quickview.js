@@ -40,6 +40,8 @@ define(['jquery', 'mage/translate', 'magnificPopup'], function ($, $t) {
             $('.' + config.handlerClassName).each(function () {
                 $(this).magnificPopup({
                     type: 'ajax',
+                    closeOnContentClick: false,
+                    closeMarkup: '<button title="Close (Esc)" type="button" class="mfp-close"></button>',
                     callbacks: {
                         parseAjax: function(mfpResponse) {
                             // mfpResponse.data is a "data" object from ajax "success" callback
@@ -54,7 +56,9 @@ define(['jquery', 'mage/translate', 'magnificPopup'], function ($, $t) {
                         },
                         ajaxContentAdded: function() {
                             // Ajax content is loaded and appended to DOM
+                            //$('.mfp-content .mfp-close').remove();
                             $('.mfp-content').trigger('contentUpdated');
+
                         }
                     }
                 });
