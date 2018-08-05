@@ -1,5 +1,5 @@
 
-define(['jquery', 'mage/translate', 'quickView'], function ($, $t) {
+define(['jquery', 'mage/translate', 'magnificPopup'], function ($, $t) {
     "use strict";
 
     $.widget('dimasch.QuickView', {
