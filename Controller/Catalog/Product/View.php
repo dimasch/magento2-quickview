@@ -68,6 +68,9 @@ class View extends \Magento\Catalog\Controller\Product
                 'template' => 'Dimasch_QuickView::root.phtml'
             ]);
             $page->addDefaultHandle();
+            $page->getLayout()->getUpdate()->addHandle('catalog_product_view');
+            $page->getLayout()->getUpdate()->addHandle('quickview_catalog_product_view');
+
             $this->viewHelper->prepareAndRender($page, $productId, $this, $params);
             return $page;
         } catch (\Magento\Framework\Exception\NoSuchEntityException $e) {

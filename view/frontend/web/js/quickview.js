@@ -54,7 +54,7 @@ define(['jquery', 'mage/translate', 'magnificPopup'], function ($, $t) {
                         },
                         ajaxContentAdded: function() {
                             // Ajax content is loaded and appended to DOM
-                            $('#cboxContent').trigger('contentUpdated');
+                            $('.mfp-content').trigger('contentUpdated');
                         }
                     }
                 });
